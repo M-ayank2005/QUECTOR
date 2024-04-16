@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import img1 from "../lib/img1.jpg";
+import img1 from "../lib/img0.jpg";
 
 import But2 from "../components/But2";
 import { useNavigate } from "react-router-dom";

@@ -1,12 +1,25 @@
-// "use client";
+
 import React, { useState } from "react";
+import Footer from "../components/Footer";
+import SignIn from "../components/But3";
 // import Image from "next/image";
 // import Footer from "@/components/Footer/page";
 // import CaretDownIcon from "@/components/Icons/icon";
 // import SignIn from "@/components/Buttons/SignIn";
 // import { useRouter } from "next/router";
 // Common styling values
-import Footer from "../components/Footer";
+
+import img1 from "../lib/img1.png"
+import img2 from "../lib/img2.png"
+import img3 from "../lib/img3.png"
+import img4 from "../lib/img4.png"
+import img5 from "../lib/img5.png"
+import img6 from "../lib/img6.png"
+import img7 from "../lib/img7.png"
+import img8 from "../lib/img8.png"
+import img9 from "../lib/img9.png"
+import img10 from "../lib/img10.jpg"
+
 const containerPadding = "px-4";
 const largeScreenPadding = "lg:px-32";
 const mediumScreenPadding = "md:px-28";
@@ -21,10 +34,7 @@ const searchButton = `${buttonBase} md:px-8 md:py-2 md:w-36 md:rounded-lg  md:te
 //Header Section
 export function Htop() {
   // const router = useRouter();
-  const handleSignInClick = (e) => {
-    e.preventDefault();
-    // router.push("/auth/login");
-  };
+ 
   return (
     <div
       className={`w-full flex flex-col ${containerPadding} ${mediumScreenPadding} ${largeScreenPadding} overflow-hidden`}
@@ -34,7 +44,7 @@ export function Htop() {
           QUECTO
         </div>
         <div className="flex flex-row gap-2 lg:gap-5">
-          {/* <SignIn handleClick={handleSignInClick} /> */}
+          <SignIn />
           <button className={signUpButton}>Sign up</button>
         </div>
       </div>
@@ -43,6 +53,8 @@ export function Htop() {
 }
 
 //Main Heading Section starts here
+
+
 
 export function Mtop() {
   return (
@@ -86,7 +98,7 @@ export function Dropdown(props) {
           <h2 className="text-lg md:text-2xl py-8 font-extrabold">
             {props.name}
           </h2>
-          {/* <button onClick={toggleDropdown}><CaretDownIcon /></button> */}
+          <button onClick={toggleDropdown}>X</button>
         </div>
       </div>
 
@@ -113,7 +125,7 @@ export function HowItWorks() {
         <div className=" w-full py-2 flex flex-row">
           <div className="w-1/3 p-2  lg:p-6">
             <div className=" w-full flex flex-col items-center gap-4 ">
-              <img src="/img9.png" width={200}></img>
+              <img src={img9} width={200}></img>
               <div className="w-full flex flex-col gap-2 lg:gap-4">
                 <h3 className=" text-xxs md:text-xl font-semibold">Step 1</h3>
                 <p className="text-xxs md:text-base">
@@ -126,7 +138,7 @@ export function HowItWorks() {
 
           <div className="w-1/3 p-2 lg:p-6 border-l border-r border-black border-opacity-30">
             <div className=" w-full flex flex-col items-center gap-4">
-              <img src="/img1.png" width={200}></img>
+              <img src={img1} width={200}></img>
               <div className="w-full flex flex-col gap-2 lg:gap-4">
                 <h3 className="text-xxs md:text-xl font-semibold">Step 2</h3>
                 <p className="text-xxs md:text-base">
@@ -139,7 +151,7 @@ export function HowItWorks() {
 
           <div className="w-1/3 p-2 lg:p-6">
             <div className=" w-full flex flex-col items-center gap-4 ">
-              <img src="/img2.png" width={200}></img>
+              <img src={img2} width={200}></img>
               <div className="w-full flex flex-col gap-2 lg:gap-4">
                 <h3 className="text-xxs md:text-xl font-semibold">Step 3</h3>
                 <p className="text-xxs md:text-base">
@@ -167,7 +179,7 @@ export function BUser() {
           <div className="h-1/3  flex flex-row border-b border-black border-opacity-30">
 
             <div className=" w-1/2 md:w-3/5 flex justify-center items-center">
-              <img src="/img3.png" width={300} height={500}></img>
+              <img src={img3} width={300} height={500}></img>
             </div>
 
             <div className="w-1/2 md:w-2/5 p-4 md:p-8  flex flex-col gap-3 md:gap-6 items-left justify-center">
@@ -180,7 +192,7 @@ export function BUser() {
 
           <div className="h-1/3 flex flex-row border-b border-black border-opacity-30">
           <div className=" w-1/2 md:w-3/5 flex justify-center items-center">
-              <img src="/img4.png" width={300} height={500}></img>
+              <img src={img4} width={300} height={500}></img>
             </div>
 
             <div className="w-1/2 md:w-2/5 p-4 md:p-8  flex flex-col gap-3 md:gap-6 items-left justify-center">
@@ -192,7 +204,7 @@ export function BUser() {
 
           <div className="h-1/3 flex flex-row ">
           <div className=" w-1/2 md:w-3/5 flex justify-center items-center">
-              <img src="/img5.png" width={300} height={500}></img>
+              <img src={img5} width={300} height={500}></img>
             </div>
 
             <div className="w-1/2 md:w-2/5 p-4 md:p-8  flex flex-col gap-3 md:gap-6 items-left justify-center">
@@ -226,7 +238,7 @@ export function DownloadApp() {
             </button>
           </div>
           <div className=" w-2/6 md:w-1/2 object-cover flex justify-center ">
-            <img src="/img6.png" className=""></img>
+            <img src={img6} className=""></img>
           </div>
         </div>
       </div>
