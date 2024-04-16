@@ -1,0 +1,3 @@
+roda o java
+roda o react
+usa o localhost:300 para fazer o registro e login
