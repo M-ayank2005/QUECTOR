@@ -1,5 +1,9 @@
 package com.example.Entity;
 import jakarta.persistence.*;
+//Jakarta Persistence API (JPA) for database interaction.
+//The @Entity annotation marks this class as a JPA entity, meaning it represents a table in the database.
+//The @Table(name="customer") annotation specifies the name of the database table corresponding to this entity.
+
 
 @Entity
 @Table(name="customer")
@@ -55,3 +59,5 @@ public class Customer {
         this.password = password;
     }
 }
+
+// the Customer class represents a persistent entity mapped to a database table. It defines the structure of the customer table and provides methods to interact with its data. 

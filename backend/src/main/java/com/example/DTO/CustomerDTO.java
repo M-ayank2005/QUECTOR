@@ -1,5 +1,6 @@
 package com.example.DTO;
 
+// CustomerDTO class is to act as a plain Java object that represents the data of a customer.
 public class CustomerDTO {
     private int customerid;
     private String customername;
