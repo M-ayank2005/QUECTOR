@@ -78,7 +78,7 @@ function RegisterPage() {
           <div>
             Already have an account?{" "}
             <span className="font-bold">
-              <a href="/"> Jump here to login</a>
+              <a href="/login"> Jump here to login</a>
             </span>
           </div>
         </div>

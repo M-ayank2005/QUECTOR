@@ -42,9 +42,9 @@ export function Htop() {
           QUECTO
         </div>
         <div className="flex flex-row gap-10 text-md  justify-between ">
-          <a href="/" className="hover:scale-110 duration-300 cursor-pointer">Explore</a>
-          <a  href='/' className="hover:scale-110 duration-300 cursor-pointer">About</a>
-          <a href='/' className="hover:scale-110 duration-300 cursor-pointer">Contact</a>
+          <a href="/home" className="hover:scale-110 duration-300 cursor-pointer">Explore</a>
+          <a  href='/about' className="hover:scale-110 duration-300 cursor-pointer">About</a>
+          <a href='/contact' className="hover:scale-110 duration-300 cursor-pointer">Contact</a>
         </div>
         <div className="flex flex-row gap-2 lg:gap-5">
           <SignIn />
