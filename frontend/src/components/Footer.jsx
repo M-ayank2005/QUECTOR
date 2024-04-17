@@ -4,22 +4,11 @@ import {
   RiInstagramFill,
   RiCopyrightLine,
   RiFacebookFill,
-  RiaedinFill,
   RiTwitterFill,
   RiGooglePlayLine,
   RiAppleLine,
 } from "@remixicon/react";
 
-import img1 from "../lib/img1.png"
-import img2 from "../lib/img2.png"
-import img3 from "../lib/img3.png"
-import img4 from "../lib/img4.png"
-import img5 from "../lib/img5.png"
-import img6 from "../lib/img6.png"
-import img7 from "../lib/img7.png"
-import img8 from "../lib/img8.png"
-import img9 from "../lib/img9.png"
-import img10 from "../lib/img10.jpg"
 export function Element() {
   return (
     <div className="w-full py-16 px-4 bg-black mt-16 flex flex-row text-white">

@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import Footer from "../components/Footer";
 import SignIn from "../components/But3";
@@ -9,16 +8,15 @@ import SignIn from "../components/But3";
 // import { useRouter } from "next/router";
 // Common styling values
 
-import img1 from "../lib/img1.png"
-import img2 from "../lib/img2.png"
-import img3 from "../lib/img3.png"
-import img4 from "../lib/img4.png"
-import img5 from "../lib/img5.png"
-import img6 from "../lib/img6.png"
-import img7 from "../lib/img7.png"
-import img8 from "../lib/img8.png"
-import img9 from "../lib/img9.png"
-import img10 from "../lib/img10.jpg"
+import img1 from "../lib/img1.png";
+import img2 from "../lib/img2.png";
+import img3 from "../lib/img3.png";
+import img4 from "../lib/img4.png";
+import img5 from "../lib/img5.png";
+import img6 from "../lib/img6.png";
+import img7 from "../lib/img7.png";
+import img8 from "../lib/img8.png";
+import img9 from "../lib/img9.png";
 
 const containerPadding = "px-4";
 const largeScreenPadding = "lg:px-32";
@@ -34,18 +32,23 @@ const searchButton = `${buttonBase} md:px-8 md:py-2 md:w-36 md:rounded-lg  md:te
 //Header Section
 export function Htop() {
   // const router = useRouter();
- 
+
   return (
     <div
       className={`w-full flex flex-col ${containerPadding} ${mediumScreenPadding} ${largeScreenPadding} overflow-hidden`}
     >
-      <div className="w-full flex flex-row justify-between py-8">
+      <div className="w-full flex flex-row justify-between py-8 items-center">
         <div className="text-4xl md:text-4xl font-bold md:tracking-wide">
           QUECTO
         </div>
+        <div className="flex flex-row gap-10 text-md  justify-between ">
+          <a href="/" className="hover:scale-110 duration-300 cursor-pointer">Explore</a>
+          <a  href='/' className="hover:scale-110 duration-300 cursor-pointer">About</a>
+          <a href='/' className="hover:scale-110 duration-300 cursor-pointer">Contact</a>
+        </div>
         <div className="flex flex-row gap-2 lg:gap-5">
           <SignIn />
-          <button className={signUpButton}>Sign up</button>
+          <button className={signUpButton}><a href="/register">Sign up</a></button>
         </div>
       </div>
     </div>
@@ -53,8 +56,6 @@ export function Htop() {
 }
 
 //Main Heading Section starts here
-
-
 
 export function Mtop() {
   return (
@@ -125,7 +126,7 @@ export function HowItWorks() {
         <div className=" w-full py-2 flex flex-row">
           <div className="w-1/3 p-2  lg:p-6">
             <div className=" w-full flex flex-col items-center gap-4 ">
-              <img src={img9} width={200}></img>
+              <img src={img9} alt="i" width={200}></img>
               <div className="w-full flex flex-col gap-2 lg:gap-4">
                 <h3 className=" text-xxs md:text-xl font-semibold">Step 1</h3>
                 <p className="text-xxs md:text-base">
@@ -138,7 +139,7 @@ export function HowItWorks() {
 
           <div className="w-1/3 p-2 lg:p-6 border-l border-r border-black border-opacity-30">
             <div className=" w-full flex flex-col items-center gap-4">
-              <img src={img1} width={200}></img>
+              <img src={img1} width={200} alt="i"></img>
               <div className="w-full flex flex-col gap-2 lg:gap-4">
                 <h3 className="text-xxs md:text-xl font-semibold">Step 2</h3>
                 <p className="text-xxs md:text-base">
@@ -151,7 +152,7 @@ export function HowItWorks() {
 
           <div className="w-1/3 p-2 lg:p-6">
             <div className=" w-full flex flex-col items-center gap-4 ">
-              <img src={img2} width={200}></img>
+              <img src={img2} width={200} alt="i"></img>
               <div className="w-full flex flex-col gap-2 lg:gap-4">
                 <h3 className="text-xxs md:text-xl font-semibold">Step 3</h3>
                 <p className="text-xxs md:text-base">
@@ -177,40 +178,55 @@ export function BUser() {
       >
         <div className="w-full flex flex-col ">
           <div className="h-1/3  flex flex-row border-b border-black border-opacity-30">
-
             <div className=" w-1/2 md:w-3/5 flex justify-center items-center">
-              <img src={img3} width={300} height={500}></img>
+              <img src={img3} width={300} height={500} alt="i"></img>
             </div>
 
             <div className="w-1/2 md:w-2/5 p-4 md:p-8  flex flex-col gap-3 md:gap-6 items-left justify-center">
               <h1 className=" text-sm md:text-3xl font-bold">As a customer</h1>
-              <p className="text-xxs md:text-lg">Enjoy the convenience of shopping from local stores. All you need is a device and our app</p>
-              <button className="border border-black w-3/4 md:p-2 rounded-md md:rounded-lg text-xxs md:text-base font-semibold duration-300 hover:bg-black hover:text-white">Shop now</button>
+              <p className="text-xxs md:text-lg">
+                Enjoy the convenience of shopping from local stores. All you
+                need is a device and our app
+              </p>
+              <button className="border border-black w-3/4 md:p-2 rounded-md md:rounded-lg text-xxs md:text-base font-semibold duration-300 hover:bg-black hover:text-white">
+                Shop now
+              </button>
             </div>
-
           </div>
 
           <div className="h-1/3 flex flex-row border-b border-black border-opacity-30">
-          <div className=" w-1/2 md:w-3/5 flex justify-center items-center">
-              <img src={img4} width={300} height={500}></img>
+            <div className=" w-1/2 md:w-3/5 flex justify-center items-center">
+              <img src={img4} width={300} height={500} alt="i"></img>
             </div>
 
             <div className="w-1/2 md:w-2/5 p-4 md:p-8  flex flex-col gap-3 md:gap-6 items-left justify-center">
-              <h1 className=" text-sm md:text-3xl font-bold">As a store owner</h1>
-              <p className="text-xxs md:text-lg">Grow your business with Quecto. Reach more customers and expand your business through our platform</p>
-              <button className="border border-black w-3/4 md:p-2 rounded-md md:rounded-lg text-xxs md:text-base font-semibold duration-300 hover:bg-black hover:text-white  ">Partner wtih us</button>
+              <h1 className=" text-sm md:text-3xl font-bold">
+                As a store owner
+              </h1>
+              <p className="text-xxs md:text-lg">
+                Grow your business with Quecto. Reach more customers and expand
+                your business through our platform
+              </p>
+              <button className="border border-black w-3/4 md:p-2 rounded-md md:rounded-lg text-xxs md:text-base font-semibold duration-300 hover:bg-black hover:text-white  ">
+                Partner wtih us
+              </button>
             </div>
           </div>
 
           <div className="h-1/3 flex flex-row ">
-          <div className=" w-1/2 md:w-3/5 flex justify-center items-center">
-              <img src={img5} width={300} height={500}></img>
+            <div className=" w-1/2 md:w-3/5 flex justify-center items-center">
+              <img src={img5} width={300} height={500} alt="i"></img>
             </div>
 
             <div className="w-1/2 md:w-2/5 p-4 md:p-8  flex flex-col gap-3 md:gap-6 items-left justify-center">
               <h1 className=" text-sm md:text-3xl font-bold">As a team</h1>
-              <p className="text-xxs md:text-lg">Join our team and contribute to building a top notch online platform to support the local businesses of India</p>
-              <button className="border border-black w-3/4 md:p-2 rounded-md md:rounded-lg text-xxs md:text-base font-semibold duration-300 hover:bg-black hover:text-white">Work with us</button>
+              <p className="text-xxs md:text-lg">
+                Join our team and contribute to building a top notch online
+                platform to support the local businesses of India
+              </p>
+              <button className="border border-black w-3/4 md:p-2 rounded-md md:rounded-lg text-xxs md:text-base font-semibold duration-300 hover:bg-black hover:text-white">
+                Work with us
+              </button>
             </div>
           </div>
         </div>
@@ -238,7 +254,7 @@ export function DownloadApp() {
             </button>
           </div>
           <div className=" w-2/6 md:w-1/2 object-cover flex justify-center ">
-            <img src={img6} className=""></img>
+            <img src={img6} className="" alt="i"></img>
           </div>
         </div>
       </div>
@@ -246,7 +262,7 @@ export function DownloadApp() {
   );
 }
 
-const HomePage= () => (
+const HomePage = () => (
   <>
     <Htop />
     <Mtop />

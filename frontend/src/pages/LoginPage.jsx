@@ -14,7 +14,7 @@ function LoginPage() {
   async function login(event) {
     event.preventDefault();
     try {
-      await axios.post("http://localhost:8085/api/v1/employee/login", {
+      await axios.post("http://localhost:8085/api/v1/customer/login", {
         email: email,
         password: password,
         }).then((res) => 
@@ -28,7 +28,7 @@ function LoginPage() {
          else if(res.data.message === "Login Success")
          { 
             
-            navigate('/');
+            navigate('/home');
          } 
           else 
          { 
