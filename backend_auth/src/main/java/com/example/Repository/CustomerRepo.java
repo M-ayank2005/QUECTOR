@@ -12,6 +12,5 @@ import java.util.Optional;
 // automatically discovered by Spring and used to perform database operations.
 public interface CustomerRepo extends JpaRepository<Customer, Integer> {
     Optional<Customer> findOneByEmailAndPassword(String email, String password);
-
     Customer findByEmail(String email);
 }

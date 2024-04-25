@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import img1 from "../lib/img0.jpg";
-
+import { NavLink } from "react-router-dom";
 import But2 from "../components/But2";
 import { useNavigate } from "react-router-dom";
 
@@ -60,7 +60,7 @@ function LoginPage() {
             <form>
               <div className="form-group mb-4">
                 <input
-                  type="text"
+                  type="email"
                   className="border-b w-full border-gray-300 pb-1 outline-none text-gray-500"
                   id="email"
                   placeholder="Email"
@@ -91,7 +91,7 @@ function LoginPage() {
         </div>
         <div>
           <div>
-            Don't have an account? <span className="font-bold"><a href="/"> Sign up for free</a></span>
+            Don't have an account? <span className="font-bold"><NavLink to="/register"> Sign up for free</NavLink></span>
           </div>
         </div>
       </div>
