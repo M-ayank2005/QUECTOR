@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "./Shop.css";
 
-import ReactTyped from "react-typed";
+
 const ShopComponent = ({ shop, onShopHover }) => {
   return (
     <div
@@ -26,7 +26,7 @@ const ShopPage = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("http://localhost:8080/api/users");
+        const response = await axios.get("http://localhost:8080/api/shops");
         setShops(response.data); // Assuming response.data is an array of shop objects
       } catch (error) {
         console.error("Error fetching shops:", error);
@@ -49,15 +49,7 @@ const ShopPage = () => {
             </div>
           )}
 
-          {!hoveredShop && (
-            <ReactTyped
-            startWhenVisible
-            strings={[
-              "If <strong>startWhenVisible</strong> is <strong>true</strong>, will start when is visible in the dom",
-            ]}
-            typeSpeed={40}
-          />
-          )}
+          
         </div>
 
         <div className="container">
