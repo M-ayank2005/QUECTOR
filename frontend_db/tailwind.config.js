@@ -5,7 +5,12 @@ module.exports = {
   },
   content: ["./src/**/*.{html,js,jsx}"],
   theme: {
-    extend: {},
+    extend: {
+      height:{
+        '100':'32rem',
+        '98':'26rem',
+      }
+    },
   },
   plugins: [require('daisyui'),],
 }
