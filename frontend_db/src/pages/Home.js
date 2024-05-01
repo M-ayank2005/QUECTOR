@@ -26,7 +26,7 @@ const Home = () => {
               Search
             </button>
           </form>
-          <div className="w-full h-98 py-4">
+          <div className="  pt-4 pb-2 ">
               <Card />
           </div>
         </div>
