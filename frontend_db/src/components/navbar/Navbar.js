@@ -1,17 +1,17 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 const Navbar = () => {
   return (
     <div className="navbar bg-base-100 bg-black text-white flex flex-row items-center justify-between">
       <div className="">
-        <a href="/" className="btn btn-ghost text-xl">
+        <Link to="/landing" className="btn btn-ghost text-xl">
           QUECTO
-        </a>
+        </Link>
       </div>
       <div className="flex flex-row justify-between gap-20 cursor-pointer font-bold ">
-        <a href="/" className="  btn  btn-ghost">HOME</a>
-        <a href="/" className="  btn  btn-ghost">ORDER</a>
-        <a href="/" className="  btn  btn-ghost">CONTACT</a>
+        <Link to="/" className="  btn  btn-ghost">HOME</Link>
+        <Link to="/" className="  btn  btn-ghost">ORDER</Link>
+        <Link to="/" className="  btn  btn-ghost">CONTACT</Link>
       </div>
       <div className="">
         <label className="swap swap-rotate">

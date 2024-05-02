@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Footer from "../components/footer/Footer";
-
+import { Link } from "react-router-dom";
 // import Image from "next/image";
 // import Footer from "@/components/Footer/page";
 // import CaretDownIcon from "@/components/Icons/icon";
@@ -39,10 +39,10 @@ export function Htop() {
     >
       <div className="w-full flex flex-row justify-between py-8 items-center">
         <div className="text-4xl md:text-4xl font-bold md:tracking-wide">
-          QUECTO
+         <Link to="/"> QUECTO</Link>
         </div>
         <div className="flex flex-row gap-10 text-md  justify-between ">
-          <a href="/home" className="hover:scale-110 duration-300 cursor-pointer">Explore</a>
+          <Link to="/" className="hover:scale-110 duration-300 cursor-pointer">Explore</Link>
           <a  href='/about' className="hover:scale-110 duration-300 cursor-pointer">About</a>
           <a href='/contact' className="hover:scale-110 duration-300 cursor-pointer">Contact</a>
         </div>
