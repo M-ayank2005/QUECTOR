@@ -1,7 +1,7 @@
 import React from "react";
 import axios from "axios";
 import { useState, useEffect } from "react";
-
+import { Link } from "react-router-dom";
 const ShopCard = ({ shop }) => {
   return (
     <div className="card w-32 bg-base-100 shadow-lg shadow-gray-300 h-48 border border-black overflow-hidden ">
@@ -15,7 +15,7 @@ const ShopCard = ({ shop }) => {
 
         <div className="card-actions justify-end p-1 h-1/2">
           <button className="hover:scale-105 duratiom-300  w-full bg-[#8EE586] border border-black text-black p-1 text-xs rounded-md font-bold">
-            Explore
+            <Link to={`/shop/${shop.id}`}>Explore</Link>
           </button>
         </div>
       </div>
