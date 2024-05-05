@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import gif from "../lib/404.gif"; 
 
 export default function App() {
@@ -13,12 +14,12 @@ export default function App() {
               We can't seem to find the page <br />
               you are looking for.
             </p>
-            <a
-              href="#"
+            <Link 
+              to="/"
               className="inline-flex items-center justify-center rounded-full bg-gray-900 py-4 px-8 font-bold text-white"
             >
               Go Home
-            </a>
+            </Link>
           </div>
 
           <div className="home__img justify-self-center">
