@@ -21,9 +21,9 @@ const ContactPage = () => {
   return (
     <>
       <div className="w-full flex flex-col px-4 md:px-32">
-        <div className="py-8 text-4xl font-bold tracking-wide">Contact Us</div>
+        <div className="py-8 text-5xl text-center font-bold tracking-wide">Contact Us</div>
         <div className="flex flex-col md:flex-row gap-8">
-          <div className="md:w-1/2">
+          <div className="md:w-1/2 my-20">
             <form onSubmit={handleSubmit} className="space-y-4">
               <div>
                 <label htmlFor="name" className="block font-semibold">
@@ -71,7 +71,7 @@ const ContactPage = () => {
               </button>
             </form>
           </div>
-          <div className="md:w-1/2">
+          <div className="md:w-1/2 my-20">
             <div className="text-lg mb-4">
               If you have any questions or feedback, feel free to reach out to
               us via email or phone:
@@ -79,14 +79,13 @@ const ContactPage = () => {
             <div className="flex flex-col gap-4">
               <div>
                 <span className="font-bold">Email:</span>{" "}
-                contact@yourwebsite.com
+                contact@Quecto.com
               </div>
               <div>
-                <span className="font-bold">Phone:</span> +123-456-7890
+                <span className="font-bold">Phone:</span> +91-6378292616
               </div>
               <div>
-                <span className="font-bold">Address:</span> 123 Main St, City,
-                Country
+                <span className="font-bold">Address:</span> Lucknow,Uttar Pradesh ,India
               </div>
             </div>
           </div>
