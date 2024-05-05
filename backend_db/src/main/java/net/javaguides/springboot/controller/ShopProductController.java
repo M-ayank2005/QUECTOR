@@ -12,6 +12,8 @@ import net.javaguides.springboot.repository.ShopProductRepository;
 @RequestMapping("/api/shop-products")
 public class ShopProductController {
 
+
+
     @Autowired
     private ShopProductRepository shopProductRepository;
 
@@ -20,6 +22,13 @@ public class ShopProductController {
     public List<ShopProduct> getAllShopProducts() {
         return this.shopProductRepository.findAll();
     }
+
+    @GetMapping("/shop/{shopId}")
+    public List<ShopProduct> getAllProductsByShopId(@PathVariable(value = "shopId") long shopId) {
+        return this.shopProductRepository.findByShopId(shopId);
+
+    }
+
 
     // get shop product by id
     @GetMapping("/{id}")
