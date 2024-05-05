@@ -4,6 +4,7 @@ import Landing from './pages/Landing';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import NoMatch from './components/NoMatch';
 import ShopDetails from './pages/ShopDetails';
+import Contact from './pages/Contact';
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
         <Route path="/landing" element={<Landing />} />
         <Route path="/shop/:slug" element={<ShopDetails />} />
         <Route path="*" element={<NoMatch />} />
+        <Route path='/contact' element= {<Contact />}/>
       </Routes>
     </BrowserRouter>
   );
