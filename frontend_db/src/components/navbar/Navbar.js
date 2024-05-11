@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 const Navbar = () => {
   return (
-    <div className="navbar bg-base-100 bg-black text-white flex flex-row items-center justify-between">
+    <div className="navbar bg-base-100 bg-[#2e2e2e] text-white flex flex-row items-center justify-between">
       <div className="">
         <Link to="/landing" className="btn btn-ghost text-xl">
           QUECTO
@@ -89,7 +89,7 @@ const Navbar = () => {
             className="btn btn-ghost btn-circle avatar"
           >
             <div className="w-10 rounded-full">
-            <i class="ri-account-circle-line text-3xl"></i>
+            <i class="ri-account-circle-line text-3xl font-light"></i>
             </div>
           </div>
           <ul

@@ -9,6 +9,9 @@ module.exports = {
       height:{
         '100':'32rem',
         '98':'26rem',
+      },
+      scale:{
+        '101': '1.007',
       }
     },
   },

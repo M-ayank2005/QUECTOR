@@ -9,7 +9,7 @@ const StarRating = ({ count }) => {
       const stars = [];
       for (let i = 1; i <= 5; i++) {
         if (i <= normalizedRating) {
-          stars.push(<i className="ri-star-fill"></i>);
+          stars.push(<i className="ri-star-fill text-yellow-600"></i>);
         } else if (i - 0.5 <= normalizedRating) {
           stars.push(<i className="ri-star-half-fill"></i>);
         } else {
