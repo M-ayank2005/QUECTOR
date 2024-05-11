@@ -9,7 +9,7 @@ const Home = () => {
     <>
       <Navbar />
       <div className="h-100 flex flex-row w-full">
-        <div className="w-2/6 flex justify-center items-center">
+        <div className="mt-6 mb-6 pr-5 w-2/6 flex justify-center items-center">
           <Carousal />
         </div>
         <div className="w-4/6  py-6 pr-6">

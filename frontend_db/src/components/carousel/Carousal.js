@@ -1,54 +1,58 @@
 import React from "react";
-
+import car1 from "../../lib/car1.jpg"
+import car2 from "../../lib/car2.jpg"
+import car3 from "../../lib/car3.jpg"
+import car4 from "../../lib/car4.jpg"
+import car5 from "../../lib/car5.jpg"
 const Carousal = () => {
     
   return (
-    <div className="w-5/6 carousel rounded-box">
+    <div className="w-96 h-full carousel rounded-box">
       <div className="carousel-item w-full">
         <img
-          src="https://daisyui.com/images/stock/photo-1559703248-dcaaec9fab78.jpg"
+          src={car1}
           className="w-full"
           alt="Tailwind CSS Carousel component"
         />
       </div>
       <div className="carousel-item w-full">
         <img
-          src="https://daisyui.com/images/stock/photo-1565098772267-60af42b81ef2.jpg"
+          src={car2}
           className="w-full"
           alt="Tailwind CSS Carousel component"
         />
       </div>
       <div className="carousel-item w-full">
         <img
-          src="https://daisyui.com/images/stock/photo-1572635148818-ef6fd45eb394.jpg"
+          src={car3}
           className="w-full"
           alt="Tailwind CSS Carousel component"
         />
       </div>
       <div className="carousel-item w-full">
         <img
-          src="https://daisyui.com/images/stock/photo-1494253109108-2e30c049369b.jpg"
+          src={car4}
           className="w-full"
           alt="Tailwind CSS Carousel component"
         />
       </div>
       <div className="carousel-item w-full">
         <img
-          src="https://daisyui.com/images/stock/photo-1550258987-190a2d41a8ba.jpg"
+          src={car5}
           className="w-full"
           alt="Tailwind CSS Carousel component"
         />
       </div>
       <div className="carousel-item w-full">
         <img
-          src="https://daisyui.com/images/stock/photo-1559181567-c3190ca9959b.jpg"
+          src={car1}
           className="w-full"
           alt="Tailwind CSS Carousel component"
         />
       </div>
       <div className="carousel-item w-full">
         <img
-          src="https://daisyui.com/images/stock/photo-1601004890684-d8cbf643f5f2.jpg"
+          src={car2}
           className="w-full"
           alt="Tailwind CSS Carousel component"
         />
