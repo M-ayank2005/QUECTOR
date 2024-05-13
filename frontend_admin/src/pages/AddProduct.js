@@ -8,7 +8,8 @@ const AddProductForm = () => {
   const [productData, setProductData] = useState({
     productName: '',
     description: '',
-    price: ''
+    price: '',
+    productImageLink: '' // Added productImageLink field
   });
 
   const [errors, setErrors] = useState({});
@@ -62,7 +63,8 @@ const AddProductForm = () => {
         setProductData({
           productName: '',
           description: '',
-          price: ''
+          price: '',
+          productImageLink: '' // Reset productImageLink field
         });
         setErrors({});
         // Show success toast
@@ -94,6 +96,11 @@ const AddProductForm = () => {
           <label htmlFor="price" className="block mb-1">Price</label>
           <input type="number" id="price" name="price" value={productData.price} onChange={handleChange} className="border border-gray-300 rounded px-3 py-2 w-full focus:outline-none focus:border-blue-500" />
           {errors.price && <div className="text-red-500 mt-1">{errors.price}</div>}
+        </div>
+        <div className="mb-4">
+          <label htmlFor="productImageLink" className="block mb-1">Product Image Link</label>
+          <input type="text" id="productImageLink" name="productImageLink" value={productData.productImageLink} onChange={handleChange} className="border border-gray-300 rounded px-3 py-2 w-full focus:outline-none focus:border-blue-500" />
+          {errors.productImageLink && <div className="text-red-500 mt-1">{errors.productImageLink}</div>}
         </div>
         <button type="submit" className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 focus:outline-none focus:bg-blue-600">Submit</button>
       </form>

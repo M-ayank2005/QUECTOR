@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 const Navbar = () => {
   return (
-    <div className="navbar bg-base-100 bg-[#2e2e2e] text-white flex flex-row items-center justify-between">
+    <div className="navbar bg-base-100 bg-slate-900 text-white flex flex-row items-center justify-between">
       <div className="">
         <Link to="/landing" className="btn btn-ghost text-xl">
           QUECTO

@@ -26,7 +26,7 @@ const Home = () => {
               Search
             </button>
           </form>
-          <div className=" overflow-auto h-5/6 w-full pt-6 pb-7 px-4  ">
+          <div className=" overflow-auto mb-6 h-5/6 w-full  pb-7 px-4  ">
               <Card />
              
           </div>
