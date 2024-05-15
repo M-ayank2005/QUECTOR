@@ -69,7 +69,7 @@ function RegisterPage() {
             
             />
           </div>
-        <button type="submit" className="btn btn-wide bg-black  text-white hover:bg-black hover:text-white w-full" onClick={save} >Save</button>
+        <button type="submit" className="btn  bg-black  text-white hover:bg-black hover:text-white w-full" onClick={save} >Save</button>
        
       </form>
           </div>
