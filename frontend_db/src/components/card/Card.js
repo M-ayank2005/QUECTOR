@@ -25,7 +25,7 @@ const ShopCard = ({ shop }) => {
     <>
     <div className="w-64 h-60 border rounded-md overflow-hidden border-black drop-shadow-md cursor-pointer ">
       <div className="h-4/6 bg-green-200  w-full overflow-hidden  ">
-          <img src={img1} alt="Shoes"/>
+          <img src={shop.imageLink} className="w-full h-full" alt={img1}/>
       </div>
 
       <div className="h-2/6 w-full  p-2">
