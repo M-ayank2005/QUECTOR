@@ -6,6 +6,7 @@ import NoMatch from './components/NoMatch';
 import ShopDetails from './pages/ShopDetails';
 import Contact from './pages/Contact';
 import Error404 from './pages/Error404';
+import ProductDetail from './pages/ProductDetail';
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
         <Route path="/shop/:slug" element={<ShopDetails />} />
         <Route path='/contact' element= {<Contact />}/>
         <Route path='*' element={<Error404 />}/>
+        <Route path='/product-detail/:slug' element={<ProductDetail />} />
       </Routes>
     </BrowserRouter>
   );
