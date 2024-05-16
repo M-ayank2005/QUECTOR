@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-SpringbootCrudRestfulWebservicesApplication<springboot-crud-restful-webservices>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "net.javaguides.springboot.SpringbootCrudRestfulWebservicesApplication",
+            "projectName": "springboot-crud-restful-webservices",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
