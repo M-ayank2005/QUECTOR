@@ -6,7 +6,7 @@ import jakarta.persistence.*;
 @Table(name = "shop_products")
 public class ShopProduct {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
     @ManyToOne
