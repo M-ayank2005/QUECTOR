@@ -10,6 +10,8 @@ import ProductDetail from './pages/ProductDetail';
 import Checkout from './pages/Checkout';
 import { useState } from 'react';
 import ProductList from './components/product/ProductList';
+import RegisterPage from './pages/RegisterPage';
+import LoginPage from './pages/LoginPage';
 const App = () => {
   const [cart, setCart] = useState([]);
   return (
@@ -17,6 +19,8 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/landing" element={<Landing />} />
+        <Route path="/register" element={<RegisterPage />} />
+        <Route path="/login" element={<LoginPage />} />
         {/* <Route path="/shop/:slug" element={<ShopDetails />} /> */}
         <Route path='/contact' element= {<Contact />}/>
         <Route path='*' element={<Error404 />}/>
