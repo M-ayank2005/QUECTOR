@@ -2,6 +2,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "SpringBootSecurityJwtApplication",
+            "request": "launch",
+            "mainClass": "com.bezkoder.springjwt.SpringBootSecurityJwtApplication",
+            "projectName": "spring-boot-security-jwt"
+        },
+        {
+            "type": "java",
+            "name": "SpringBootSecurityJwtApplication",
+            "request": "launch",
+            "mainClass": "com.quecto.springjwt.SpringBootSecurityJwtApplication",
+            "projectName": "spring-boot-security-jwt"
+        },
+        {
+            "type": "java",
             "name": "Spring Boot-SpringbootCrudRestfulWebservicesApplication<springboot-crud-restful-webservices>",
             "request": "launch",
             "cwd": "${workspaceFolder}",
