@@ -7,17 +7,23 @@ import ShopDetails from './pages/ShopDetails';
 import Contact from './pages/Contact';
 import Error404 from './pages/Error404';
 import ProductDetail from './pages/ProductDetail';
-
+import Checkout from './pages/Checkout';
+import { useState } from 'react';
+import ProductList from './components/product/ProductList';
 const App = () => {
+  const [cart, setCart] = useState([]);
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/landing" element={<Landing />} />
-        <Route path="/shop/:slug" element={<ShopDetails />} />
+        {/* <Route path="/shop/:slug" element={<ShopDetails />} /> */}
         <Route path='/contact' element= {<Contact />}/>
         <Route path='*' element={<Error404 />}/>
         <Route path='/product-detail/:slug' element={<ProductDetail />} />
+        <Route path='/checkout' element={<Checkout cart={cart} />} />
+        <Route path='/shop/:slug' element={<ProductList cart={cart} setCart={setCart}
+        />} />
       </Routes>
     </BrowserRouter>
   );

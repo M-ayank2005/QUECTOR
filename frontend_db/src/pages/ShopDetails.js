@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import Navbar from "../components/navbar/Navbar";
 import SecNavbar from "../components/sec_navbar/SecNavbar";
-import Product from "../components/product/Product";
+// import Product from "../components/product/Product";
 
 const ShopDetails = () => {
   const { slug } = useParams();
@@ -35,7 +35,7 @@ const ShopDetails = () => {
         <Navbar />
         <SecNavbar shopName={shops.shopName} rating={shops.ratings}/>
       <h1>{shops.shopName}</h1>
-     <Product />
+     {/* <Product /> */}
     </>
   );
 };

@@ -30,7 +30,7 @@ const Navbar = () => {
       </div>
       <div className="flex flex-row justify-between gap-20 cursor-pointer font-bold">
         <Link to="/" className="btn btn-ghost">HOME</Link>
-        <Link to="/" className="btn btn-ghost">ORDER</Link>
+        <Link to="/checkout" className="btn btn-ghost">ORDER</Link>
         <Link to="/contact" className="btn btn-ghost">CONTACT</Link>
       </div>
       <div>
