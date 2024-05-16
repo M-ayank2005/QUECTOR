@@ -30,6 +30,7 @@ function ProductList({ cart, setCart }) {
     axios
       .get(`http://localhost:8080/api/shop-products/shop/${slug}`)
       .then((response) => {
+        console.log(products)
         setProducts(response.data);
       })
       .catch((error) => {
@@ -83,7 +84,7 @@ function ProductList({ cart, setCart }) {
           {products.map((item) => (
             <div
               key={item.product.id}
-              className="border  border-gray-200 rounded-lg overflow-hidden bg-white shadow-md w-56 h-72 transition duration-300 hover:shadow-xl hover:scale-105"
+              className="border  border-gray-200 rounded-lg overflow-hidden bg-white shadow-md w-72 h-72 transition duration-300 hover:shadow-xl hover:scale-105"
             >
               <img
                 src={item.product.productImageLink}
