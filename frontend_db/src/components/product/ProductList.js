@@ -1,17 +1,15 @@
-import React, { useState, useEffect } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
-import axios from 'axios';
-import { useParams } from 'react-router-dom';
-import Navbar from '../navbar/Navbar';
-import SecNavbar from '../sec_navbar/SecNavbar';
+import React, { useState, useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import axios from "axios";
+import { useParams } from "react-router-dom";
+import Navbar from "../navbar/Navbar";
+import SecNavbar from "../sec_navbar/SecNavbar";
+import Footer from "../footer/Footer";
+
 function ProductList({ cart, setCart }) {
   const [products, setProducts] = useState([]);
   const navigate = useNavigate();
   const { slug } = useParams();
-
-
-  console.log(slug);
-
   const [shops, setShops] = useState([]);
 
   useEffect(() => {
@@ -20,27 +18,29 @@ function ProductList({ cart, setCart }) {
         const response = await axios.get(
           `http://localhost:8080/api/shops/${slug}`
         );
-        console.log(response.data);
-        setShops(response.data); // Assuming response.data is an array of shop objects
+        setShops(response.data);
       } catch (error) {
         console.error("Error fetching shops:", error);
       }
     };
     fetchData();
-  }, []);
+  }, [slug]);
 
   useEffect(() => {
-    axios.get(`http://localhost:8080/api/shop-products/shop/${slug}`)
-      .then(response => {
-        setProducts(response.data); // Set the products array
+    axios
+      .get(`http://localhost:8080/api/shop-products/shop/${slug}`)
+      .then((response) => {
+        setProducts(response.data);
       })
-      .catch(error => {
-        console.error('Error fetching products:', error);
+      .catch((error) => {
+        console.error("Error fetching products:", error);
       });
-  }, []);
+  }, [slug]);
 
   const addToCart = (product) => {
-    const existingItemIndex = cart.findIndex(item => item.product.id === product.product.id);
+    const existingItemIndex = cart.findIndex(
+      (item) => item.product.id === product.product.id
+    );
     if (existingItemIndex !== -1) {
       const updatedCart = [...cart];
       updatedCart[existingItemIndex].quantity += 1;
@@ -51,17 +51,17 @@ function ProductList({ cart, setCart }) {
   };
 
   const decreaseQuantity = (productId) => {
-    const updatedCart = cart.map(item => {
+    const updatedCart = cart.map((item) => {
       if (item.product.id === productId) {
         return { ...item, quantity: Math.max(0, item.quantity - 1) };
       }
       return item;
     });
-    setCart(updatedCart.filter(item => item.quantity > 0));
+    setCart(updatedCart.filter((item) => item.quantity > 0));
   };
 
   const increaseQuantity = (productId) => {
-    const updatedCart = cart.map(item => {
+    const updatedCart = cart.map((item) => {
       if (item.product.id === productId) {
         return { ...item, quantity: item.quantity + 1 };
       }
@@ -71,32 +71,82 @@ function ProductList({ cart, setCart }) {
   };
 
   const goToCheckout = () => {
-    navigate('/checkout');
+    navigate("/checkout");
   };
 
   return (
-    <div>
+    <>
       <Navbar />
-        <SecNavbar shopName={shops.shopName} rating={shops.ratings}/>
-      <h1>{shops.shopName}</h1>
-
-      <h1>Product List</h1>
-      <ul>
-        {products.map((item) => (
-          <li key={item.product.id}>
-            <img src={item.product.productImageLink} alt={item.product.productName} width="100" />
-           <Link to={`/product-detail/${item.product.id}`}><h2>{item.product.productName}</h2></Link> 
-            <p>{item.product.description}</p>
-            <p>${item.product.price}</p>
-            <p>Quantity: {cart.find(cartItem => cartItem.product.id === item.product.id)?.quantity || 0}</p>
-            <button onClick={() => addToCart(item)}>Add to Cart</button>
-            <button onClick={() => decreaseQuantity(item.product.id)}>Decrease Quantity</button>
-            <button onClick={() => increaseQuantity(item.product.id)}>Increase Quantity</button>
-          </li>
-        ))}
-      </ul>
-      <button onClick={goToCheckout}>Checkout</button>
-    </div>
+      <SecNavbar shopName={shops.shopName} rating={shops.ratings} />
+      <div className="w-full h-full">
+        <div className="flex flex-row flex-wrap gap-6 m-6 overflow-hidden min-h-[32rem]">
+          {products.map((item) => (
+            <div
+              key={item.product.id}
+              className="border border-gray-200 rounded-lg overflow-hidden bg-white shadow-md w-52 h-72 transition duration-300 hover:shadow-xl"
+            >
+              <img
+                src={item.product.productImageLink}
+                alt={item.product.productName}
+                className="w-full h-48 object-cover"
+              />
+              <div className="p-3">
+                <div className="flex flex-row justify-between">
+                  <Link to={`/product-detail/${item.product.id}`}>
+                    <h2 className="text-lg font-semibold text-gray-800">
+                      {item.product.productName}
+                    </h2>
+                  </Link>
+                  <div className="flex flex-row gap-2">
+                    <p className="text-gray-800 font-semibold line-through text-lg">
+                      {item.product.price}
+                    </p>
+                    <p className="text-gray-800 font-semibold text-lg">
+                      {item.price}
+                    </p>
+                  </div>
+                </div>
+                <div className="flex justify-between mt-4">
+                  <div className="flex items-center">
+                    <button
+                      onClick={() => decreaseQuantity(item.product.id)}
+                      className="text-gray-600"
+                    >
+                      -
+                    </button>
+                    <p className="mx-2">
+                      {cart.find(
+                        (cartItem) =>
+                          cartItem.product.id === item.product.id
+                      )?.quantity || 0}
+                    </p>
+                    <button
+                      onClick={() => increaseQuantity(item.product.id)}
+                      className="text-gray-600"
+                    >
+                      +
+                    </button>
+                  </div>
+                  <button
+                    onClick={() => addToCart(item)}
+                    className="px-3 py-1 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition duration-300"
+                  >
+                    Add to Cart
+                  </button>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+        <button
+          onClick={goToCheckout}
+          className="fixed bottom-6 right-6 px-6 py-3 bg-green-800 hover:scale-105 duration-300 hover:bg-green-900 text-white rounded-md shadow-md"
+        >
+          Checkout
+        </button>
+      </div>
+      <Footer />
+    </>
   );
 }
 
