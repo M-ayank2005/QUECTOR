@@ -7,36 +7,19 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
 function LoginPage() {
-  const [email, setEmail] = useState("");
+  const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
 
   async function login(event) {
     event.preventDefault();
     try {
-      await axios.post("http://localhost:8085/api/v1/customer/login", {
-        email: email,
+     const response =  await axios.post("http://127.0.0.1:8080/api/auth/signin", {
+        username: username,
         password: password,
-        }).then((res) => 
-        {
-         console.log(res.data);
-         
-         if (res.data.message === "Email not exits") 
-         {
-           alert("Email not exits");
-         } 
-         else if(res.data.message === "Login Success")
-         { 
-            
-            navigate('/home');
-         } 
-          else 
-         { 
-            alert("Incorrect Email and Password not match");
-         }
-      }, fail => {
-       console.error(fail); // Error!
-});
+        })
+        console.log(response);
+        alert("Login Successfully");
     }
 
      catch (err) {
@@ -60,13 +43,13 @@ function LoginPage() {
             <form>
               <div className="form-group mb-4">
                 <input
-                  type="email"
+                  // type="email"
                   className="border-b w-full border-gray-300 pb-1 outline-none text-gray-500"
-                  id="email"
-                  placeholder="Email"
-                  value={email}
+                  id="username"
+                  placeholder="Username"
+                  value={username}
                   onChange={(event) => {
-                    setEmail(event.target.value);
+                    setUsername(event.target.value);
                   }}
                 />
               </div>

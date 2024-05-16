@@ -5,7 +5,7 @@ import img1 from "../lib/img0.jpg"
 
 import { useNavigate } from "react-router-dom";
 function RegisterPage() {
-  const [employeename, setEmployeename] = useState("");
+  const [username, setusername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
@@ -13,8 +13,8 @@ function RegisterPage() {
   async function save(event) {
     event.preventDefault();
     try {
-      await axios.post("http://localhost:8085/api/v1/customer/save", {
-        employeename: employeename,
+      await axios.post("http://127.0.0.1:8080/api/auth/signup", {
+        username: username,
         email: email,
         password: password,
       });
@@ -38,11 +38,11 @@ function RegisterPage() {
            <form className="flex flex-col gap-4">
         <div class="form-group">
           
-          <input type="text" className="border-b w-full border-gray-300 pb-1 outline-none text-gray-500" id="employeename" placeholder="Enter Name"
+          <input type="text" className="border-b w-full border-gray-300 pb-1 outline-none text-gray-500" id="username" placeholder="Enter Name"
           
-          value={employeename}
+          value={username}
           onChange={(event) => {
-            setEmployeename(event.target.value);
+            setusername(event.target.value);
           }}
           />
         </div>
