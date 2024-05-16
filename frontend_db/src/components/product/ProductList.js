@@ -83,7 +83,7 @@ function ProductList({ cart, setCart }) {
           {products.map((item) => (
             <div
               key={item.product.id}
-              className="border border-gray-200 rounded-lg overflow-hidden bg-white shadow-md w-52 h-72 transition duration-300 hover:shadow-xl"
+              className="border  border-gray-200 rounded-lg overflow-hidden bg-white shadow-md w-56 h-72 transition duration-300 hover:shadow-xl hover:scale-105"
             >
               <img
                 src={item.product.productImageLink}
@@ -110,7 +110,7 @@ function ProductList({ cart, setCart }) {
                   <div className="flex items-center">
                     <button
                       onClick={() => decreaseQuantity(item.product.id)}
-                      className="text-gray-600"
+                      className="btn btn-square btn-sm btn-outline hover:bg-white hover:text-black"
                     >
                       -
                     </button>
@@ -122,14 +122,14 @@ function ProductList({ cart, setCart }) {
                     </p>
                     <button
                       onClick={() => increaseQuantity(item.product.id)}
-                      className="text-gray-600"
+                      className="btn btn-square btn-sm btn-outline hover:bg-white hover:text-black"
                     >
                       +
                     </button>
                   </div>
                   <button
                     onClick={() => addToCart(item)}
-                    className="px-3 py-1 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition duration-300"
+                    className="btn btn-sm bg-black text-white hover:bg-black"
                   >
                     Add to Cart
                   </button>
@@ -140,7 +140,7 @@ function ProductList({ cart, setCart }) {
         </div>
         <button
           onClick={goToCheckout}
-          className="fixed bottom-6 right-6 px-6 py-3 bg-green-800 hover:scale-105 duration-300 hover:bg-green-900 text-white rounded-md shadow-md"
+          className="fixed bottom-6 right-6 px-6 py-3 btn btn-md btn-neutral hover:bg-text-white hover:bg-black"
         >
           Checkout
         </button>

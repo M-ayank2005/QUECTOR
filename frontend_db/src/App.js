@@ -12,6 +12,7 @@ import { useState } from 'react';
 import ProductList from './components/product/ProductList';
 import RegisterPage from './pages/RegisterPage';
 import LoginPage from './pages/LoginPage';
+import { ToastContainer } from 'react-toastify';
 const App = () => {
   const [cart, setCart] = useState([]);
   return (
@@ -29,6 +30,7 @@ const App = () => {
         <Route path='/shop/:slug' element={<ProductList cart={cart} setCart={setCart}
         />} />
       </Routes>
+      <ToastContainer />
     </BrowserRouter>
   );
 };

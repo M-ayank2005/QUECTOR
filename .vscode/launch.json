@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "SpringbootCrudRestfulWebservicesApplication",
+            "request": "launch",
+            "mainClass": "net.javaguides.springboot.SpringbootCrudRestfulWebservicesApplication",
+            "projectName": "com.bezkoder-spring-boot-security-jwt"
+        },
+        {
+            "type": "java",
             "name": "SpringBootSecurityJwtApplication",
             "request": "launch",
             "mainClass": "com.bezkoder.springjwt.SpringBootSecurityJwtApplication",

@@ -2,7 +2,7 @@ import React from "react";
 import axios from "axios";
 import { useState } from "react";
 import img1 from "../lib/img0.jpg"
-
+import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
 function RegisterPage() {
   const [username, setusername] = useState("");
@@ -18,10 +18,10 @@ function RegisterPage() {
         email: email,
         password: password,
       });
-      alert("Employee Registation Successfully");
+      toast.success("Registration Successfully");
       navigate("/login")
     } catch (err) {
-      alert(err);
+      toast.error("Registration Failed");
     }
   }
 

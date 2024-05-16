@@ -48,8 +48,9 @@ export function Htop() {
         </div>
         <div className="flex flex-row gap-2 lg:gap-5">
           {/* <SignIn /> */}
-          <button className={signInButton}><a href="/register">Sign in</a></button>
-          <button className={signUpButton}><a href="/register">Sign up</a></button>
+          <Link to={"/register"}><button className={signInButton}>Sign in</button></Link>
+          <Link to={"/login"}><button className={signUpButton}>Sign up</button></Link>
+          
         </div>
       </div>
     </div>

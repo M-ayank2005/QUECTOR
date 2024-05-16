@@ -3,8 +3,9 @@ import img1 from "../lib/img0.jpg";
 import { NavLink } from "react-router-dom";
 import But2 from "../components/But2";
 import { useNavigate } from "react-router-dom";
-
 import axios from "axios";
+import { toast, ToastContainer} from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 function LoginPage() {
   const [username, setUsername] = useState("");
@@ -14,19 +15,18 @@ function LoginPage() {
   async function login(event) {
     event.preventDefault();
     try {
-     const response =  await axios.post("http://127.0.0.1:8080/api/auth/signin", {
+      const response = await axios.post("http://127.0.0.1:8080/api/auth/signin", {
         username: username,
         password: password,
-        })
-        console.log(response);
-        alert("Login Successfully");
+      });
+      console.log(response);
+      toast.success("Login Successfully");
+      navigate("/");
+    } catch (err) {
+      toast.error("Login Failed" );
     }
-
-     catch (err) {
-      alert(err);
-    }
-  
   }
+
   return (
     <div className="w-full h-screen flex flex-row">
       <div className="w-1/2 h-full bg-black">
@@ -43,7 +43,6 @@ function LoginPage() {
             <form>
               <div className="form-group mb-4">
                 <input
-                  // type="email"
                   className="border-b w-full border-gray-300 pb-1 outline-none text-gray-500"
                   id="username"
                   placeholder="Username"
@@ -66,7 +65,13 @@ function LoginPage() {
                 />
               </div>
               <div className="mt-10 flex flex-col gap-3">
-              <button type='submit' onClick={login} className="btn  bg-black  text-white hover:bg-black hover:text-white w-full">Log in</button>
+                <button
+                  type="submit"
+                  onClick={login}
+                  className="btn bg-black text-white hover:bg-black hover:text-white w-full"
+                >
+                  Log in
+                </button>
                 <But2 />
               </div>
             </form>
@@ -74,7 +79,7 @@ function LoginPage() {
         </div>
         <div>
           <div>
-            Don't have an account? <span className="font-bold"><NavLink to="/register"> Sign up for free</NavLink></span>
+            Don't have an account? <span className="font-bold"><NavLink to="/register">Sign up for free</NavLink></span>
           </div>
         </div>
       </div>
