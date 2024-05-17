@@ -42,5 +42,13 @@ public class EmailController {
 
 		return status;
 	}
+	@PostMapping("/sendRegistrationMail")
+	public String sendRegistrationMail(
+		@RequestBody EmailDetails details)
+	{
+		String status = emailService.sendRegistrationMail(details);
+
+		return status;
+	}
 }
 
