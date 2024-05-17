@@ -18,7 +18,7 @@ const ShopDetails = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:8080/api/shops/${slug}`
+          `http://ec2-user@ec2-3-110-94-120.ap-south-1.compute.amazonaws.com:8080/api/shops/${slug}`
         );
         console.log(response.data);
         setShops(response.data); // Assuming response.data is an array of shop objects
