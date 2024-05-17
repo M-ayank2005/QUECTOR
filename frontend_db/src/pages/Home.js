@@ -9,7 +9,7 @@ const Home = () => {
     <>
       <Navbar />
       <div className="h-100 flex flex-row w-full ">
-        <div className="mt-6 mb-6 pr-5 w-2/6 flex justify-center items-center">
+        <div className="mt-6  mb-6 pr-5 w-2/6 flex justify-center items-center">
           <Carousal />
         </div>
         <div className="w-4/6    flex flex-col items-center justify-between">
@@ -26,7 +26,7 @@ const Home = () => {
               Search
             </button>
           </form>
-          <div className=" overflow-auto mb-6 h-5/6 w-full  pb-7 px-4  ">
+          <div className=" overflow-auto mb-6 h-5/6 w-full  py-2 pb-6 px-4  ">
               <Card />
              
           </div>
