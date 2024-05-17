@@ -28,7 +28,7 @@ function RegisterPage() {
         pincode: pincode,
         role: [role], // Sending role as an array
       });
-      console.log(setRole)
+      
       toast.success("Registration Successfully");
       navigate("/login");
       try{
