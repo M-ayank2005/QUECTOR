@@ -16,7 +16,7 @@ function ProductList({ cart, setCart }) {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          `http://3.110.94.120:8080/api/shops/${slug}`
+          `http://ec2-user@ec2-3-110-94-120.ap-south-1.compute.amazonaws.com:8080/api/shops/${slug}`
         );
         setShops(response.data);
       } catch (error) {
@@ -28,7 +28,7 @@ function ProductList({ cart, setCart }) {
 
   useEffect(() => {
     axios
-      .get(`http://3.110.94.120:8080/api/shop-products/shop/${slug}`)
+      .get(`http://ec2-user@ec2-3-110-94-120.ap-south-1.compute.amazonaws.com:8080/api/shop-products/shop/${slug}`)
       .then((response) => {
         console.log(products)
         setProducts(response.data);

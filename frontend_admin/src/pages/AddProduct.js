@@ -56,7 +56,7 @@ const AddProductForm = () => {
     }
 
     // Form data is valid, submit the data
-    axios.post('http://3.110.94.120:8080/api/products', productData)
+    axios.post('http://ec2-user@ec2-3-110-94-120.ap-south-1.compute.amazonaws.com:8080/api/products', productData)
       .then(response => {
         console.log('Product added successfully:', response.data);
         // Clear form after successful submission

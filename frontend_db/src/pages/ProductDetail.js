@@ -14,7 +14,7 @@ const ProductDetail = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          `http://3.110.94.120:8080/api/products/${slug}`
+          `http://ec2-user@ec2-3-110-94-120.ap-south-1.compute.amazonaws.com:8080/api/products/${slug}`
         );
         setProduct(response.data);
       } catch (error) {

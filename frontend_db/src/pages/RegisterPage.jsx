@@ -19,7 +19,7 @@ function RegisterPage() {
   async function save(event) {
     event.preventDefault();
     try {
-      await axios.post("http://127.0.0.1:8080/api/auth/signup", {
+      await axios.post("http://ec2-user@ec2-3-110-94-120.ap-south-1.compute.amazonaws.com:8080/api/auth/signup", {
         username: username,
         email: email,
         password: password,
@@ -32,7 +32,7 @@ function RegisterPage() {
       toast.success("Registration Successfully");
       navigate("/login");
       try{
-        await axios.post("http://3.110.94.120:8080/api/sendRegistrationMail",{
+        await axios.post("http://ec2-user@ec2-3-110-94-120.ap-south-1.compute.amazonaws.com:8080/api/sendRegistrationMail",{
           recipient :email,
           msgBody:username,
           subject:"Registration Successfull-Quecto",
