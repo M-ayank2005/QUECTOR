@@ -5,6 +5,8 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import NoMatch from './components/NoMatch';
 import ShopDetails from './pages/ShopDetails';
 import Contact from './pages/Contact';
+
+import About from './pages/About';
 import Error404 from './pages/Error404';
 import ProductDetail from './pages/ProductDetail';
 import Checkout from './pages/Checkout';
@@ -24,6 +26,7 @@ const App = () => {
         <Route path="/login" element={<LoginPage />} />
         {/* <Route path="/shop/:slug" element={<ShopDetails />} /> */}
         <Route path='/contact' element= {<Contact />}/>
+        <Route path='/about' element={<About />}/>
         <Route path='*' element={<Error404 />}/>
         <Route path='/product-detail/:slug' element={<ProductDetail />} />
         <Route path='/checkout' element={<Checkout cart={cart} />} />
