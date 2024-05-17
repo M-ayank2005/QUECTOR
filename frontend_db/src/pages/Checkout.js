@@ -2,7 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import Navbar from "../components/navbar/Navbar";
 import Footer from "../components/footer/Footer";
-
+import { Link } from "react-router-dom";
 function Checkout({ cart }) {
   const navigate = useNavigate();
 
@@ -71,12 +71,12 @@ function Checkout({ cart }) {
               placeholder="To Address" 
               className="p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
-            <button 
+            <Link to={'/confirm'} ><button 
               type="submit" 
               className="mt-4 px-4 py-2 btn btn-neutral bg-green-500 text-white rounded-md hover:bg-green-600 transition duration-300"
             >
               PAY WITH CASH
-            </button>
+            </button></Link>
           </form>
         </div>
       </div>

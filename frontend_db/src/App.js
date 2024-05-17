@@ -15,6 +15,8 @@ import ProductList from './components/product/ProductList';
 import RegisterPage from './pages/RegisterPage';
 import LoginPage from './pages/LoginPage';
 import { ToastContainer } from 'react-toastify';
+import Profile from './pages/Profile';
+
 const App = () => {
   const [cart, setCart] = useState([]);
   return (
@@ -30,6 +32,7 @@ const App = () => {
         <Route path='*' element={<Error404 />}/>
         <Route path='/product-detail/:slug' element={<ProductDetail />} />
         <Route path='/checkout' element={<Checkout cart={cart} />} />
+      <Route path='/profile' element={<Profile />}/>
         <Route path='/shop/:slug' element={<ProductList cart={cart} setCart={setCart}
         />} />
       </Routes>
