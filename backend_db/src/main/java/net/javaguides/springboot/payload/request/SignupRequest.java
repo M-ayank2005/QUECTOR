@@ -20,6 +20,10 @@ public class SignupRequest {
   @Size(min = 6, max = 40)
   private String password;
 
+  private String phoneno;
+  private String address;
+  private String pincode;
+
   public String getUsername() {
     return username;
   }
@@ -42,6 +46,26 @@ public class SignupRequest {
 
   public void setPassword(String password) {
     this.password = password;
+  }
+
+  public String getPhoneno() {
+    return phoneno;
+  }
+  public void setPhoneno(String phoneno) {
+    this.phoneno = phoneno;
+  }
+
+  public String getAddress() {
+    return address;
+  }
+  public String getPincode() {
+    return pincode;
+  }
+  public void setAddress(String address) {
+    this.address = address;
+  }
+  public void setPincode(String pincode) {
+    this.pincode = pincode;
   }
 
   public Set<String> getRole() {
