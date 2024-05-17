@@ -30,8 +30,18 @@ function RegisterPage() {
       });
       toast.success("Registration Successfully");
       navigate("/login");
+      try{
+        await axios.post("http://localhost:8080/api/sendRegistrationMail",{
+          recipient :email,
+          msgBody:username,
+          subject:"Registration Successfull-Quecto",
+        })
+      }
+      catch(err){
+        console.log(err)
+      }
     } catch (err) {
-      toast.error("Registration Failed");
+      toast.error(err.message);
     }
   }
 
