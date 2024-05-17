@@ -19,9 +19,13 @@ function LoginPage() {
         username: username,
         password: password,
       });
-      console.log(response);
+      // console.log(response.data);
+      const { id, userName, email, roles ,accessToken , tokenType } = response.data;
+      localStorage.setItem('jwt', JSON.stringify({accessToken,tokenType}));
+      localStorage.setItem('user', JSON.stringify({ id, userName, email, roles }));
+      // console.log(response.username);
       toast.success("Login Successfully");
-      navigate("/");
+      // navigate("/");
     } catch (err) {
       toast.error("Login Failed" );
     }
