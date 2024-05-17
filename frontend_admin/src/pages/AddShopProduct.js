@@ -54,7 +54,7 @@ const AddShopProduct = () => {
     }
 
     // Form data is valid, submit the data
-    axios.post('http://localhost:8080/api/shop-products', {
+    axios.post('http://3.110.94.120:8080/api/shop-products', {
       shop: { id: shopData.shop },
       product: { id: shopData.product },
       price: parseFloat(shopData.price) // Ensure price is converted to a number

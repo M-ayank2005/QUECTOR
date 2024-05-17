@@ -45,7 +45,7 @@ const Card = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("http://localhost:8080/api/shops");
+        const response = await axios.get("http://3.110.94.120:8080/api/shops");
         setShops(response.data); // Assuming response.data is an array of shop objects
       } catch (error) {
         console.error("Error fetching shops:", error);

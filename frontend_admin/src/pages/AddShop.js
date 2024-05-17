@@ -65,7 +65,7 @@ const AddShopForm = () => {
     }
 
     // Form data is valid, submit the data
-    axios.post('http://localhost:8080/api/shops', shopData)
+    axios.post('http://3.110.94.120:8080/api/shops', shopData)
       .then(response => {
         console.log('Shop added successfully:', response.data);
         // Clear form after successful submission

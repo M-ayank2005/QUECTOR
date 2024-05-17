@@ -14,7 +14,7 @@ const ProductDetail = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:8080/api/products/${slug}`
+          `http://3.110.94.120:8080/api/products/${slug}`
         );
         setProduct(response.data);
       } catch (error) {

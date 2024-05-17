@@ -32,7 +32,7 @@ function RegisterPage() {
       toast.success("Registration Successfully");
       navigate("/login");
       try{
-        await axios.post("http://localhost:8080/api/sendRegistrationMail",{
+        await axios.post("http://3.110.94.120:8080/api/sendRegistrationMail",{
           recipient :email,
           msgBody:username,
           subject:"Registration Successfull-Quecto",

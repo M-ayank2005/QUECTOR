@@ -16,7 +16,7 @@ function ProductList({ cart, setCart }) {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:8080/api/shops/${slug}`
+          `http://3.110.94.120:8080/api/shops/${slug}`
         );
         setShops(response.data);
       } catch (error) {
@@ -28,7 +28,7 @@ function ProductList({ cart, setCart }) {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:8080/api/shop-products/shop/${slug}`)
+      .get(`http://3.110.94.120:8080/api/shop-products/shop/${slug}`)
       .then((response) => {
         console.log(products)
         setProducts(response.data);
@@ -100,10 +100,10 @@ function ProductList({ cart, setCart }) {
                   </Link>
                   <div className="flex flex-row gap-2">
                     <p className="text-gray-800 font-semibold line-through text-lg">
-                      {item.product.price}
+                      Rs{item.product.price}
                     </p>
                     <p className="text-gray-800 font-semibold text-lg">
-                      {item.price}
+                      Rs{item.price}
                     </p>
                   </div>
                 </div>

@@ -15,7 +15,7 @@ function LoginPage() {
   async function login(event) {
     event.preventDefault();
     try {
-      const response = await axios.post("http://127.0.0.1:8080/api/auth/signin", {
+      const response = await axios.post("http://3.110.94.120:8080/api/auth/signin", {
         username: username,
         password: password,
       });
