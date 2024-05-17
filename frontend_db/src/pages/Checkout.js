@@ -5,7 +5,8 @@ import Footer from "../components/footer/Footer";
 import { Link } from "react-router-dom";
 function Checkout({ cart }) {
   const navigate = useNavigate();
-
+  const datas = cart;
+  console.log(datas)
   const getTotal = () => {
     return cart.reduce(
       (sum, item) => sum + item.product.price * item.quantity,
