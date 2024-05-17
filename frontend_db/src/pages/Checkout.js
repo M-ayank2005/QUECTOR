@@ -24,7 +24,7 @@ function Checkout({ cart }) {
         {/* Items Section */}
         <div className="w-full lg:w-3/5 p-6 bg-white hover:scale-101 max-h-96 duration-300 rounded-lg shadow-xl">
           <h1 className="text-2xl font-semibold mb-4">ORDER DETAILS</h1>
-          <ul className="mb-4  h-80  overflow-y-auto">
+          <ul className="mb-4  h-64  overflow-y-auto">
             {cart.map((item, index) => (
               <li
                 key={index}

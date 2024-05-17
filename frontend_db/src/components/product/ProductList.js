@@ -141,7 +141,7 @@ function ProductList({ cart, setCart }) {
         </div>
         <button
           onClick={goToCheckout}
-          className="fixed bottom-6 right-6 px-6 py-3 btn btn-md btn-neutral hover:bg-text-white hover:bg-black"
+          className="fixed bottom-6 right-6 px-6 py-3 animate-bounce btn btn-md btn-neutral hover:bg-text-white hover:bg-black"
         >
           Checkout
         </button>
