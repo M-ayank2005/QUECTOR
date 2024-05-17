@@ -72,7 +72,7 @@ function Checkout({ cart }) {
               placeholder="To Address" 
               className="p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
-            <Link to={'/confirm'} ><button 
+            <Link to={'/thanks'} ><button 
               type="submit" 
               className="mt-4 px-4 py-2 btn btn-neutral bg-green-500 text-white rounded-md hover:bg-green-600 transition duration-300"
             >
