@@ -1,13 +1,19 @@
 import React from "react";
 import axios from "axios";
 import { useState } from "react";
-import img1 from "../lib/img0.jpg"
+import img1 from "../lib/img0.jpg";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
+
 function RegisterPage() {
-  const [username, setusername] = useState("");
+  const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [phoneno, setPhoneno] = useState("");
+  const [address, setAddress] = useState("");
+  const [pincode, setPincode] = useState("");
+  const [role, setRole] = useState("user"); // Default role
+
   const navigate = useNavigate();
 
   async function save(event) {
@@ -17,9 +23,13 @@ function RegisterPage() {
         username: username,
         email: email,
         password: password,
+        phoneno: phoneno,
+        address: address,
+        pincode: pincode,
+        role: [role], // Sending role as an array
       });
       toast.success("Registration Successfully");
-      navigate("/login")
+      navigate("/login");
     } catch (err) {
       toast.error("Registration Failed");
     }
@@ -35,43 +45,76 @@ function RegisterPage() {
             <p className="text-sm">We are ready to onboard you with a new journey</p>
           </div>
           <div>
-           <form className="flex flex-col gap-4">
-        <div class="form-group">
-          
-          <input type="text" className="border-b w-full border-gray-300 pb-1 outline-none text-gray-500" id="username" placeholder="Enter Name"
-          
-          value={username}
-          onChange={(event) => {
-            setusername(event.target.value);
-          }}
-          />
-        </div>
-        <div class="form-group">
-         
-          <input type="email"  className="border-b w-full border-gray-300 pb-1 outline-none text-gray-500"id="email" placeholder="Enter Email"
-          
-          value={email}
-          onChange={(event) => {
-            setEmail(event.target.value);
-          }}
-          
-          />
- 
-        </div>
-        <div class="form-group">
-           
-            <input type="password" className="border-b w-full border-gray-300 pb-1 outline-none text-gray-500" id="password" placeholder="Enter password"
-            
-            value={password}
-            onChange={(event) => {
-              setPassword(event.target.value);
-            }}
-            
-            />
-          </div>
-        <button type="submit" className="btn  bg-black  text-white hover:bg-black hover:text-white w-full" onClick={save} >Save</button>
-       
-      </form>
+            <form className="flex flex-col gap-4" onSubmit={save}>
+              <div className="form-group">
+                <input
+                  type="text"
+                  className="border-b w-full border-gray-300 pb-1 outline-none text-gray-500"
+                  id="username"
+                  placeholder="Enter Name"
+                  value={username}
+                  onChange={(event) => setUsername(event.target.value)}
+                />
+              </div>
+              <div className="form-group">
+                <input
+                  type="email"
+                  className="border-b w-full border-gray-300 pb-1 outline-none text-gray-500"
+                  id="email"
+                  placeholder="Enter Email"
+                  value={email}
+                  onChange={(event) => setEmail(event.target.value)}
+                />
+              </div>
+              <div className="form-group">
+                <input
+                  type="password"
+                  className="border-b w-full border-gray-300 pb-1 outline-none text-gray-500"
+                  id="password"
+                  placeholder="Enter Password"
+                  value={password}
+                  onChange={(event) => setPassword(event.target.value)}
+                />
+              </div>
+              <div className="form-group">
+                <input
+                  type="text"
+                  className="border-b w-full border-gray-300 pb-1 outline-none text-gray-500"
+                  id="phoneno"
+                  placeholder="Enter Phone Number"
+                  value={phoneno}
+                  onChange={(event) => setPhoneno(event.target.value)}
+                />
+              </div>
+              <div className="form-group">
+                <input
+                  type="text"
+                  className="border-b w-full border-gray-300 pb-1 outline-none text-gray-500"
+                  id="address"
+                  placeholder="Enter Address"
+                  value={address}
+                  onChange={(event) => setAddress(event.target.value)}
+                />
+              </div>
+              <div className="form-group">
+                <input
+                  type="text"
+                  className="border-b w-full border-gray-300 pb-1 outline-none text-gray-500"
+                  id="pincode"
+                  placeholder="Enter Pincode"
+                  value={pincode}
+                  onChange={(event) => setPincode(event.target.value)}
+                />
+              </div>
+             
+              <button
+                type="submit"
+                onClick={save}
+                className="btn bg-black text-white hover:bg-black hover:text-white w-full"
+              >
+                Save
+              </button>
+            </form>
           </div>
         </div>
         <div>

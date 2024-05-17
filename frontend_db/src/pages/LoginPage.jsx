@@ -25,7 +25,7 @@ function LoginPage() {
       localStorage.setItem('userdata', JSON.stringify(response.data))
       // console.log(response.username);
       toast.success("Login Successfully");
-      // navigate("/");
+       navigate("/");
     } catch (err) {
       toast.error("Login Failed" );
     }
