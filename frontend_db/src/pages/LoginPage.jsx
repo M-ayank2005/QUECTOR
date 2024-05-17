@@ -19,10 +19,10 @@ function LoginPage() {
         username: username,
         password: password,
       });
-      // console.log(response.data);
-      const { id, userName, email, roles ,accessToken , tokenType } = response.data;
+      console.log(response.data);
+      const { accessToken , tokenType } = response.data;
       localStorage.setItem('jwt', JSON.stringify({accessToken,tokenType}));
-      localStorage.setItem('user', JSON.stringify({ id, userName, email, roles }));
+      localStorage.setItem('userdata', JSON.stringify(response.data))
       // console.log(response.username);
       toast.success("Login Successfully");
       // navigate("/");
