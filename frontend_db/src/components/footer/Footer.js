@@ -9,20 +9,20 @@ const Footer = () => {
     <a href='/' className="link link-hover">Nearby Shops</a>
     <a href='/' className="link link-hover">Trending Shops</a>
     <a href='/' className="link link-hover">Become a seller</a>
-    <a href='/' className="link link-hover">Pay Later</a>
+    <a href='/a' className="link link-hover">Pay Later</a>
   </nav> 
   <nav>
     <h6 className="footer-title">Company</h6> 
-    <a href='/' className="link link-hover">About us</a>
-    <a href='/' className="link link-hover">Contact</a>
-    <a href='/' className="link link-hover">Jobs</a>
-    <a href='/' className="link link-hover">Press kit</a>
+    <a href='./about' className="link link-hover">About us</a>
+    <a href='./contact' className="link link-hover">Contact</a>
+    <a href='/a' className="link link-hover">Jobs</a>
+    <a href='/a' className="link link-hover">Press kit</a>
   </nav> 
   <nav>
     <h6 className="footer-title">Legal</h6> 
-    <a href='/' className="link link-hover">Terms of use</a>
-    <a href='/' className="link link-hover">Privacy policy</a>
-    <a href='/' className="link link-hover">Cookie policy</a>
+    <a href='/a' className="link link-hover">Terms of use</a>
+    <a href='/a' className="link link-hover">Privacy policy</a>
+    <a href='/a' className="link link-hover">Cookie policy</a>
   </nav>
 </footer> 
 <footer className="footer px-10 py-4 border-t bg-base-200 text-base-content border-base-300">
