@@ -20,7 +20,7 @@ const Profile = () => {
   useEffect(() => {
     // Fetch user data from the API when the user state changes
     if (user) {
-      axios.get(`http://127.0.0.1:8080/api/user/${user}`)
+      axios.get(`http://ec2-user@ec2-3-110-94-120.ap-south-1.compute.amazonaws.com:8080/api/user/${user}`)
         .then(response => {
           setUserData(response.data);
           console.log(response);
