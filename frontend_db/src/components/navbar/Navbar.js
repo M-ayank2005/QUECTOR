@@ -85,6 +85,9 @@ const Navbar = () => {
             <li><a href="/">Logout</a></li>
           </ul>
         </div>
+        <div>
+          <button className="btn btn-sm">Login</button>
+        </div>
       </div>
     </div>
   );
