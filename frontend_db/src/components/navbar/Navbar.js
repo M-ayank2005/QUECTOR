@@ -86,7 +86,7 @@ const Navbar = () => {
           </ul>
         </div>
         <div>
-          <button className="btn btn-sm">Login</button>
+         <Link to={'/login'}><button className="btn btn-sm">Login</button></Link> 
         </div>
       </div>
     </div>
